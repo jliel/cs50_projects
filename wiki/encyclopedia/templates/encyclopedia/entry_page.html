@@ -1,0 +1,19 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{title}}
+{% endblock title %}
+{% block body %}
+    {% if entry %}
+        <div class="m-2">
+            {{entry|safe}}
+            <div class="d-flex">
+                <a class="ml-auto p-5" href="{% url 'edit_page' title %}">Edit Page</a>
+            </div>
+        </div>
+    {% else %}
+        <div class="d-flex align-items-center justify-content-center vh-100">
+            <h1 class="display-1 fw-bold text-secondary">404 Requested page not found</h1>
+        </div>
+    {% endif %}
+{% endblock body %}

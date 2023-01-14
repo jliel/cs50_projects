@@ -1,0 +1,19 @@
+{% extends 'encyclopedia/layout.html' %}
+
+
+{% block title %}
+    Search Not Found
+{% endblock title %}
+
+{% block body %}
+    <span>No entries matched the query "{{query}}"</span>
+    <span>but you can read these articles:</span>
+    <ul>
+        {% for entry in recommended %}
+            <li><a href="{% url 'entry_page' entry %}">{{entry}}</a></li>
+        {% endfor %}
+    </ul>
+        
+{% endblock body %}
+
+    
