@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+}
+
+/* NAVBAR */
+.nav {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    padding: 15px 17px;
+}
+
+.navbar {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: nowrap;
+}
+
+.navbar > div {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: nowrap;
+}
+
+.navbar li {
+    color: rgba(0,0,0,.87);
+    height: 30px;
+    line-height: 30px;
+}
+
+.navbar li a {
+    text-decoration: none;
+}
+
+.navbar li a:hover {
+    text-decoration: underline;
+}
+.navbar li a img {
+    vertical-align: middle;
+}
+
+.apps-icon {
+    opacity: 0.6;
+    width: 16px;
+    height: 16px;
+}
+
+/* MAIN SEARCH */
+
+.logo {
+    position: absolute;
+    left: 52%;
+    top: 33.3%;
+    margin-top: -50px; /* Half of total height */
+    margin-left: -150px; /* Half of total width */
+}
+
+.form {
+    position: absolute;
+    left: 44%;
+    top: 45%;
+    margin-top: -50px; /* Half of total height */
+    margin-left: -150px; /* Half of total width */
+}
+
+.search-container {
+    display: flex;
+    height: 44px;
+    border: 1px solid #dfe1e5;
+    align-items: center;
+    box-shadow: none;
+    border-radius: 24px;
+    margin: 0 auto;
+    width: 584px;
+    max-width: 584px;
+}
+
+.search-container>input {
+    display: flex;
+    height: 42px;
+    border: none;
+    font-size: 18px;
+    flex: 1;
+}
+
+.search-container>input:focus {
+    outline: none;
+}
+
+.bar-icons {
+    width: 20px;
+}
+
+.search-icon {
+    width: 16px;
+}
+.icon-container {
+    padding: 6px;
+}
+.form-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+input[type="submit"], button[type="submit"] {
+    text-decoration: none;
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+input[type="submit"]:hover, button[type="submit"]:hover {
+    box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+    background-color: #f8f9fa;
+    border: 1px solid #dadce0;
+    color: #202124;
+}
+
+.images-logo {
+    color: #4285f4;
+    font: 16px/16px roboto-regular, arial, sans-serif;
+    position: absolute;
+    left: 210px;
+    bottom: 0;
+    white-space: nowrap;
+}
+
+hr {
+    opacity: 0.2;
+}
+
+.google-mini {
+    width: 74px;
+    height: 24px;
+}
+
+.advanced-container {
+    display: grid;
+    margin: 1.3rem 3rem;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 1em;
+    max-width: 600px;
+    align-items: center;
+}
+
+label {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input[class="advanced"] {
+    background-color: #4d90fe;
+    color: #fff;
+    float: right;
+    width: 150px;
+}
+
+input[class="advanced"]:hover {
+    color: #fff;
+    background-color: #357ae8;
+    border: 1px solid #2f5bb7;
+}
+.advanced-button {
+    grid-column: 2 / 3;
+}
+h1 {
+    color: #d93025;
+    font-size: 1.5rem;
+    font-weight: 100;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 1.5rem;
+    margin: 1.0rem 3rem;
+}
+
+.advanced-wrapper span {
+    margin: 1.3rem 3rem;
+    font-size: 1.3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+}
+
+.advanced-wrapper hr {
+    margin-bottom: 3rem;
+    width: 100%;
+    height: 2px;
+}
+
+/* FOOTER */
+footer {
+    background-color: #F2F2F2;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+}
+
+footer .links {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+}
+
+.country {
+    font-size: 14px;
+    color: #70757a;
+    padding: 15px 25px;
+}
+
+.links-l, .links-r {
+    display: flex;
+    gap: 2rem;
+}
+
+footer a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #70757a;
+}
+
