@@ -1,0 +1,42 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h2>Active Listings</h2>
+    <div class="row gap-3 m-auto">
+        
+        {% if listing %}
+            
+            {% for list in listing %}
+                
+                {% if list.active or list.winner == request.user %}
+                
+                    <div class="card m-1 p-1" style="width: 18rem;">
+                        {% if list.image %}
+                            <img src="{{ list.image }}" class="card-img-top" alt="...">
+                        {% endif %}
+                            <div class="card-body">
+                                <h5 class="card-title">{{list.title}}</h5>
+                                <p class="card-text">{{ list.description }}</p>
+                                <p><span>Price: {{ list.start_bid }}</span></p>
+                                <span>Created: {{ list.created }}</span>
+                                <a href="{% url 'listing' list.id %}" class="stretched-link"></a>
+                            </div>
+                        </div>
+                {% endif %}
+                    
+            {% endfor %}
+        {% endif %}
+        {% if not listing and watchlist %}
+            <div class="alert alert-warning" role="alert">
+                No articles listed in your Watchlist
+                <a href="{% url 'index' %}">Back to full list</a>
+            </div>
+        {% endif %}
+        {% if not listing and filter %}
+            <div class="alert alert-warning" role="alert">
+                No articles listed in this category
+            </div>
+        {% endif %}
+            
+    </div>
+{% endblock %}

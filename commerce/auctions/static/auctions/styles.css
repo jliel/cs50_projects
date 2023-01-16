@@ -1,0 +1,22 @@
+body {
+    padding: 10px;
+}
+
+.small-text {
+    margin-left: 1rem;
+    font-size: 10px;
+}
+
+.blockquote {
+    font-size: 1rem;
+}
+
+.border-comment {
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+
+.counter-watchs {
+    background-color: gainsboro;
+    padding: 2px;
+    border-radius: 10%;
+}

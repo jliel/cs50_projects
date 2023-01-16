@@ -1,0 +1,25 @@
+{% extends 'auctions/layout.html' %}
+
+
+{% block title %}
+    Categories
+{% endblock title %}
+
+{% block body %}
+    <div class="container">
+        
+        {% if categories %}
+            <ul>
+                
+                {% for category in categories %}
+                    <li><a href="{% url 'filter_categories' category.id %}">{{category.title}}</a></li>
+                {% endfor %}
+                    
+            </ul>
+            {% else %}
+            <h3>No categories available. Contact our admins.</h3>
+        {% endif %}
+            
+    </div>
+{% endblock body %}
+    
